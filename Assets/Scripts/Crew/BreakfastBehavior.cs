@@ -19,6 +19,8 @@ public class BreakfastBehavior : MonoBehaviour
     {
         if (hasMovedToBreakfast) return;
 
+        if (TimeManager.Instance == null) return;
+
         float currentTime = TimeManager.Instance.timeOfDay;
 
         if (currentTime >= breakfastTime)

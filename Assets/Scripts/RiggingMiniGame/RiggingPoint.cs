@@ -14,8 +14,12 @@ public class RiggingPoint : MonoBehaviour, IInteractable
         spriteRenderer.color = rigColor;
     }
 
+    // Lazy Loaded
     public void SetColor(Color color)
     {
+        if (spriteRenderer == null)
+            spriteRenderer = GetComponent<SpriteRenderer>();
+
         rigColor = color;
         spriteRenderer.color = color;
     }

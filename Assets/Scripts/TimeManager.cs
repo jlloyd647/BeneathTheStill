@@ -14,7 +14,15 @@ public class TimeManager : MonoBehaviour
     public TextMeshProUGUI timeDisplay;
 
     private static TimeManager instance;
-    public static TimeManager Instance => instance;
+    public static TimeManager Instance
+    {
+        get
+        {
+            if (instance == null)
+                instance = FindFirstObjectByType<TimeManager>();
+            return instance;
+        }
+    }
 
     private void Awake()
     {

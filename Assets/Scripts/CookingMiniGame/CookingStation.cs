@@ -26,6 +26,8 @@ public class CookingStation : MonoBehaviour
 
     void Update()
     {
+        if (CookingGameManager.Instance == null || !CookingGameManager.Instance.IsCooking) return;
+        
         if (!CookingGameManager.Instance.IsCooking) return;
 
         flipTimer += Time.deltaTime;

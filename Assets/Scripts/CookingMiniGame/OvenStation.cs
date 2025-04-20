@@ -88,7 +88,17 @@ public class OvenStation : MonoBehaviour, IInteractable
 
     private void Update()
     {
+        // Bail early if hot reload reset our bar but we're still marked cooking
         if (isCooking && activeBar == null)
+        {
+            Debug.LogWarning("<color=orange>⚠️ Hot reload detected. Resetting cook state to prevent crash.</color>");
+            isCooking = false;
+            cookTimer = 0f;
+            return;
+        }
+
+        // Just a fallback backup if we wanted to preserve cookTimer too
+        if (isCooking)
         {
             cookTimer -= Time.deltaTime;
             if (cookTimer <= 0f)

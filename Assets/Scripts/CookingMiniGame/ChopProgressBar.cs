@@ -9,7 +9,6 @@ public class ChopProgressBar : MonoBehaviour
     private Slider slider;
 
     private Action onChopComplete;
-    private bool isInitialized = false;
 
     public void Initialize(float time, Action callback)
     {
@@ -19,7 +18,6 @@ public class ChopProgressBar : MonoBehaviour
 
         chopTime = time;
         onChopComplete = callback;
-        isInitialized = true;
         timer = 0f;
 
         if (slider == null)
@@ -52,7 +50,6 @@ public class ChopProgressBar : MonoBehaviour
         if (timer >= chopTime)
         {
             Debug.Log("🎉 Timer complete! Triggering callback.");
-            isInitialized = false;
 
             onChopComplete?.Invoke(); // <== the line that fires your actual logic
             gameObject.SetActive(false);
