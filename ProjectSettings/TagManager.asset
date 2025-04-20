@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 3
+  tags:
+  - Crew
+  - SpawnPoint
+  - MastZone
+  - MastClimbZone
+  - YardClimbZone
+  - MastAnchor
+  - YardAnchor
+  - YardJumpPoint
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Pushable
+  - TackStrip
+  - Player
+  - Crew
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Floor
+    uniqueID: 809624483
+    locked: 0
+  - name: Wall
+    uniqueID: 1690429729
+    locked: 0
+  - name: Furniture
+    uniqueID: 4111906725
+    locked: 0
+  - name: Tack Strips
+    uniqueID: 3231537163
+    locked: 0
+  - name: Crew
+    uniqueID: 235368309
+    locked: 0
+  - name: Player
+    uniqueID: 587674453
+    locked: 0
+  - name: Interactable
+    uniqueID: 3595177029
+    locked: 0
+  - name: Wall Foreground
+    uniqueID: 468317379
+    locked: 0
+  - name: Furniture Foreground
+    uniqueID: 536955359
+    locked: 0
+  - name: UI
+    uniqueID: 440345411
+    locked: 0
+  m_RenderingLayers:
+  - Default

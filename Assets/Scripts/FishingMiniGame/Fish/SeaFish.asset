@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fd7cd35006ebb14a9f4130a678c3b87, type: 3}
+  m_Name: SeaFish
+  m_EditorClassIdentifier: 
+  fishEntries:
+  - fish:
+      fishName: Minnow
+      icon: {fileID: 0}
+      rarity: 0
+      value: 10
+    chance: 0.5
+  - fish:
+      fishName: Tuna
+      icon: {fileID: 0}
+      rarity: 0
+      value: 15
+    chance: 0.25
+  - fish:
+      fishName: Bluegill
+      icon: {fileID: 0}
+      rarity: 0
+      value: 15
+    chance: 0.25
