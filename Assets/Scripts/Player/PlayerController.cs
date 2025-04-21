@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 movement;
     private Rigidbody2D rb;
     private PlayerClimbController climbController;
+    private Vector2? movementAxisConstraint = null;
 
     private bool isFrozen = false; // 🆕 Added
 
@@ -25,10 +26,15 @@ public class PlayerController : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (movementAxisConstraint.HasValue)
         {
-            GetComponent<PlayerStats>()?.UseStamina(10);
+            movement = Vector2.Dot(movement, movementAxisConstraint.Value) * movementAxisConstraint.Value;
         }
+
+        // if (Input.GetKeyDown(KeyCode.Space))
+        // {
+        //     GetComponent<PlayerStats>()?.UseStamina(10);
+        // }
 
         climbController?.HandleJumpInput(movement.x);
     }
@@ -53,6 +59,16 @@ public class PlayerController : MonoBehaviour
     public void ResetSpeed()
     {
         currentSpeed = baseSpeed;
+    }
+
+    public void SetMovementAxisConstraint(Vector2 axis)
+    {
+        movementAxisConstraint = axis.normalized;
+    }
+
+    public void ClearMovementAxisConstraint()
+    {
+        movementAxisConstraint = null;
     }
 
     // 🆕 External control methods

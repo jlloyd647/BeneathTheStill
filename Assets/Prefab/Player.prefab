@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: -8269272974332974134}
   - component: {fileID: 4979686145330528650}
   - component: {fileID: 1423111856200393560}
+  - component: {fileID: -3051824395097159672}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -305,4 +306,18 @@ MonoBehaviour:
   tackStripPreviewPrefab: {fileID: 1933539549010741800, guid: f14bc04436c78054ea57bb33e0a78561, type: 3}
   tackStripRealPrefab: {fileID: 4780702222705442553, guid: de52752080d63a840889d0c3ff24b577, type: 3}
   interactBarPrefab: {fileID: 6430837462206023951, guid: e780260244fdb3d44b6d10632e870744, type: 3}
-  tileSize: 1
+--- !u!114 &-3051824395097159672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2260109461014907341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0303d195719b16b4db942b17c6832424, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pullRange: 1.5
+  pullSpeedModifier: 0.2
+  pullKey: 32

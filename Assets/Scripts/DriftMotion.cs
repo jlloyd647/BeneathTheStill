@@ -58,12 +58,17 @@ public class DriftMotion : MonoBehaviour
 
         while (elapsed < duration)
         {
+            if (isSecured) yield break; // 🔒 Stop mid-drift if secured
+
             float t = elapsed / duration;
             rb.MovePosition(Vector2.Lerp(start, end, t));
             elapsed += Time.deltaTime;
             yield return null;
         }
 
-        rb.MovePosition(end);
+        if (!isSecured)
+        {
+            rb.MovePosition(end);
+        }
     }
 }
