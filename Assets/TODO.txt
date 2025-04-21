@@ -1,0 +1,26 @@
+# Features
+Crate degredation
+Add icons to quick selection
+Better spreadable dirt mapping
+Make dirt able to be cleaned without standing in it
+Crows Nest
+Night and Day cycle
+Weather system
+Grid overlay for placement mode
+Allow player to pull and push crates over tack strips
+Tackstrips degrade over time
+Quick Selection for meals
+
+# Refactors
+Chopping Station for multiple types of chop. 
+
+# Weird Bugs
+First potato chop seems to be failing and passing.
+Look into states after hot reloading a scene 
+Sometimes you ride crates that you grabed
+Y axis sorting - Player should be in front of objects they 
+  are in front of and behind objects the are behind
+
+# UI Stuff
+Tool Inventory
+Item Inventory

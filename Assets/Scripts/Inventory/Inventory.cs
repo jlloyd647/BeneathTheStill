@@ -140,4 +140,15 @@ public class Inventory : MonoBehaviour
         }
         return false;
     }
+
+    public List<InventoryItem> GetItemsByType(params object[] acceptedTypes)
+    {
+        return generalItems.Where(item =>
+            item.quantity > 0 &&
+            acceptedTypes.Any(type =>
+                (type is ItemType it && item.itemType == it) ||
+                (type is IngredientSubType ist && item.ingredientSubType == ist)
+            )
+        ).ToList();
+    }
 }
